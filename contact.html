@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — A.C.E</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#969696', brutal: '#1a1a1a' },
+          fontFamily: { sans: ['"Space Grotesk"', 'system-ui', 'sans-serif'], mono: ['"JetBrains Mono"', 'monospace'] },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white text-brutal font-sans antialiased">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white border-b-[3px] border-black transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <img src="src/assets/LOGO1.svg" alt="A.C.E Logo" class="h-10 w-10 rounded-xl object-cover mix-blend-multiply border-2 border-black bg-white group-hover:scale-110 transition-transform duration-200" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="h-10 w-10 rounded-xl border-2 border-black bg-accent text-white font-bold text-lg items-center justify-center hidden">A</div>
+        <span class="font-bold text-lg tracking-tight">A.C.E</span>
+      </a>
+      <div class="hidden md:flex items-center gap-2">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="about.html" class="nav-btn">About</a>
+        <a href="hardware.html" class="nav-btn">Hardware</a>
+        <a href="docs.html" class="nav-btn">Features</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden w-10 h-10 border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-200" aria-expanded="false" aria-label="Toggle navigation menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t-[3px] border-black bg-white">
+      <div class="px-6 py-4 flex flex-col gap-2">
+        <a href="index.html" class="nav-btn w-full text-center">Home</a>
+        <a href="about.html" class="nav-btn w-full text-center">About</a>
+        <a href="hardware.html" class="nav-btn w-full text-center">Hardware</a>
+        <a href="docs.html" class="nav-btn w-full text-center">Features</a>
+        <a href="contact.html" class="nav-btn w-full text-center">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <section class="bg-gray-50 relative overflow-hidden pt-24 pb-24">
+    <div class="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none" style="background-image: repeating-linear-gradient(45deg, #1a1a1a 0, #1a1a1a 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal-child" style="--delay: 0s">
+        <span class="inline-block border-2 border-black px-3 py-1 text-sm font-mono font-medium mb-4 bg-white">Contact</span>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight">Contact <span class="bg-accent text-white px-2 rotate-1 inline-block">A.C.E</span></h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">Have questions, feedback, or ideas for A.C.E? Get in touch. I am always interested in hearing from students, developers, and people interested in improving education through technology.</p>
+      </div>
+
+      <!-- Contact Info Cards -->
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+
+        <!-- Creator Card -->
+        <div class="reveal-child border-[3px] border-black bg-white p-8 shadow-[5px_5px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.1s">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-14 h-14 border-[3px] border-black bg-accent flex items-center justify-center text-white font-bold text-xl rounded-lg">LB</div>
+            <div>
+              <div class="font-bold text-lg">Lihan Badenhorst</div>
+              <div class="text-sm text-gray-500">Creator of A.C.E</div>
+            </div>
+          </div>
+          <div class="h-[3px] bg-gray-200 mb-5"></div>
+          <p class="text-sm text-gray-600 leading-relaxed mb-5">A.C.E is built to make student life easier by combining organisation tools, planning features, and AI-powered learning support into one platform.</p>
+          <div class="text-[11px] font-bold tracking-widest uppercase text-accent mb-2">Location</div>
+          <div class="text-sm">Hawke's Bay, New Zealand</div>
+        </div>
+
+        <!-- Contact Details Card -->
+        <div class="reveal-child border-[3px] border-black bg-white p-8 shadow-[5px_5px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.2s">
+          <h3 class="text-lg font-bold mb-5 tracking-tight">Get In Touch</h3>
+          <div class="space-y-5">
+            <a href="mailto:lihanbadenhorst48@gmail.com" class="flex items-center gap-4 group">
+              <div class="w-10 h-10 border-2 border-black bg-gray-100 flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors duration-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <div class="text-[11px] font-bold tracking-widest uppercase text-accent">Email</div>
+                <div class="text-sm underline underline-offset-2 decoration-accent group-hover:text-accent transition-colors">lihanbadenhorst48@gmail.com</div>
+              </div>
+            </a>
+            <a href="https://github.com/coolboy17289" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 group">
+              <div class="w-10 h-10 border-2 border-black bg-gray-100 flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-colors duration-200">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div>
+                <div class="text-[11px] font-bold tracking-widest uppercase text-accent">GitHub</div>
+                <div class="text-sm underline underline-offset-2 decoration-accent group-hover:text-accent transition-colors">github.com/coolboy17289</div>
+              </div>
+            </a>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 border-2 border-black bg-gray-100 flex items-center justify-center">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <div class="text-[11px] font-bold tracking-widest uppercase text-accent">Project</div>
+                <div class="text-sm">A.C.E — Academic Companion Engine</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brutal text-white border-t-[3px] border-black">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-10 h-10 rounded-xl border-2 border-white/30 bg-accent flex items-center justify-center font-bold text-lg">A</div>
+            <span class="font-bold text-xl tracking-tight">A.C.E</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-xs">Your personal academic companion. Designed to help students stay organised, plan effectively, and learn smarter.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm tracking-widest uppercase mb-4 text-gray-300">Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-200">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors duration-200">About</a></li>
+            <li><a href="hardware.html" class="text-gray-400 hover:text-white transition-colors duration-200">Hardware</a></li>
+            <li><a href="docs.html" class="text-gray-400 hover:text-white transition-colors duration-200">Features</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-200">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm tracking-widest uppercase mb-4 text-gray-300">Connect</h4>
+          <div class="flex gap-3">
+            <a href="https://github.com/coolboy17289" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border-2 border-white/20 flex items-center justify-center hover:bg-white hover:text-brutal transition-all duration-200 text-gray-400" aria-label="GitHub">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-500 text-sm">© 2026 A.C.E. All rights reserved.</p>
+        <p class="text-gray-500 text-xs font-mono">Built with ❤️ by Lihan Badenhorst</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

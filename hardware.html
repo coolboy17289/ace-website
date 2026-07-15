@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hardware — A.C.E</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { accent: '#969696', brutal: '#1a1a1a' },
+          fontFamily: { sans: ['"Space Grotesk"', 'system-ui', 'sans-serif'], mono: ['"JetBrains Mono"', 'monospace'] },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white text-brutal font-sans antialiased">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white border-b-[3px] border-black transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 group">
+        <img src="src/assets/LOGO1.svg" alt="A.C.E Logo" class="h-10 w-10 rounded-xl object-cover mix-blend-multiply border-2 border-black bg-white group-hover:scale-110 transition-transform duration-200" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="h-10 w-10 rounded-xl border-2 border-black bg-accent text-white font-bold text-lg items-center justify-center hidden">A</div>
+        <span class="font-bold text-lg tracking-tight">A.C.E</span>
+      </a>
+      <div class="hidden md:flex items-center gap-2">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="about.html" class="nav-btn">About</a>
+        <a href="hardware.html" class="nav-btn">Hardware</a>
+        <a href="docs.html" class="nav-btn">Features</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden w-10 h-10 border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-200" aria-expanded="false" aria-label="Toggle navigation menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t-[3px] border-black bg-white">
+      <div class="px-6 py-4 flex flex-col gap-2">
+        <a href="index.html" class="nav-btn w-full text-center">Home</a>
+        <a href="about.html" class="nav-btn w-full text-center">About</a>
+        <a href="hardware.html" class="nav-btn w-full text-center">Hardware</a>
+        <a href="docs.html" class="nav-btn w-full text-center">Features</a>
+        <a href="contact.html" class="nav-btn w-full text-center">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HARDWARE SECTION -->
+  <section class="bg-white relative overflow-hidden pt-24 pb-24">
+    <div class="absolute top-20 left-0 w-24 h-24 border-[3px] border-black -rotate-12 opacity-10 pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-40 h-40 border-[3px] border-black rounded-full opacity-10 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Header -->
+      <div class="text-center mb-20 reveal-child" style="--delay: 0s">
+        <span class="inline-block border-2 border-black px-3 py-1 text-sm font-mono font-medium mb-4 bg-gray-100">Hardware</span>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight">A.C.E <span class="bg-brutal text-white px-3 -rotate-1 inline-block">Hardware</span><br/>Ecosystem</h2>
+        <p class="mt-6 text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">A.C.E is designed as more than a digital platform. It exists as a dedicated academic companion device built around accessible and affordable hardware — a personalised learning assistant students can use every day.</p>
+      </div>
+
+      <!-- Core Device -->
+      <div class="grid lg:grid-cols-2 gap-10 items-start mb-20">
+        <div class="reveal-child" style="--delay: 0.1s">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 border-[3px] border-black bg-accent flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold tracking-tight">A.C.E Core Device</h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">The foundation is a small single-board computer providing enough performance for the operating system, AI tools, and student applications. The device runs the full A.C.E software environment with direct access to planning tools, AI assistance, and academic management.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-accent shrink-0"></span> Raspberry Pi 5 (16GB RAM) primary system</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-accent shrink-0"></span> Raspberry Pi 4 compatibility for lower-cost builds</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-accent shrink-0"></span> Active cooling solution</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-accent shrink-0"></span> USB-C power delivery</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-accent shrink-0"></span> Built-in WiFi &amp; Bluetooth</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-accent shrink-0"></span> GPIO expansion for hardware modules</li>
+          </ul>
+        </div>
+        <div class="reveal-child border-[3px] border-black bg-gray-50 p-8 shadow-[5px_5px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.2s">
+          <div class="text-xs font-mono font-bold tracking-widest uppercase text-accent mb-4">Core Specs</div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="border-2 border-black bg-white p-4 text-center"><div class="text-2xl font-bold">16GB</div><div class="text-xs text-gray-500 mt-1">RAM</div></div>
+            <div class="border-2 border-black bg-white p-4 text-center"><div class="text-2xl font-bold">Quad</div><div class="text-xs text-gray-500 mt-1">Core CPU</div></div>
+            <div class="border-2 border-black bg-white p-4 text-center"><div class="text-2xl font-bold">WiFi</div><div class="text-xs text-gray-500 mt-1">&amp; Bluetooth</div></div>
+            <div class="border-2 border-black bg-white p-4 text-center"><div class="text-2xl font-bold">GPIO</div><div class="text-xs text-gray-500 mt-1">Expansion</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Display -->
+      <div class="grid lg:grid-cols-2 gap-10 items-start mb-20">
+        <div class="reveal-child border-[3px] border-black bg-white p-8 shadow-[5px_5px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_#1a1a1a] transition-all duration-200 order-2 lg:order-1" style="--delay: 0.1s">
+          <div class="border-[3px] border-black bg-gray-50 p-6">
+            <div class="bg-white border-2 border-black p-4 mb-3">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-mono font-bold">A.C.E DASHBOARD</span>
+                <span class="w-2 h-2 rounded-full bg-green-500"></span>
+              </div>
+              <div class="grid grid-cols-3 gap-2 text-center">
+                <div class="border border-gray-300 p-2"><div class="text-lg font-bold">5</div><div class="text-[10px] text-gray-400">Tasks Due</div></div>
+                <div class="border border-gray-300 p-2"><div class="text-lg font-bold">12h</div><div class="text-[10px] text-gray-400">Study Time</div></div>
+                <div class="border border-gray-300 p-2"><div class="text-lg font-bold">92%</div><div class="text-[10px] text-gray-400">On Track</div></div>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <div class="flex-1 border-2 border-black bg-accent text-white text-center py-2 text-xs font-bold">Schedule</div>
+              <div class="flex-1 border-2 border-black bg-brutal text-white text-center py-2 text-xs font-bold">Notes</div>
+              <div class="flex-1 border-2 border-black bg-gray-200 text-center py-2 text-xs font-bold">AI Help</div>
+            </div>
+          </div>
+          <p class="text-center text-xs text-gray-400 mt-3 font-mono">7" Touchscreen Interface</p>
+        </div>
+        <div class="reveal-child order-1 lg:order-2" style="--delay: 0.2s">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 border-[3px] border-black bg-brutal flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold tracking-tight">Interactive Student Display</h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">A dedicated touchscreen interface allows students to interact naturally with their academic assistant. The screen acts as a central command centre, showing important information without requiring them to constantly open a laptop or phone.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-brutal shrink-0"></span> 7-inch touchscreen display</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-brutal shrink-0"></span> Custom dashboard interface</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-brutal shrink-0"></span> Quick access to assignments &amp; schedules</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-brutal shrink-0"></span> Touch-based controls for notes &amp; planning</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-brutal shrink-0"></span> Real-time academic information display</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sensors -->
+      <div class="grid lg:grid-cols-2 gap-10 items-start mb-20">
+        <div class="reveal-child" style="--delay: 0.1s">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 border-[3px] border-black bg-accent flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </div>
+            <h3 class="text-2xl font-bold tracking-tight">Learning &amp; Environment Sensors</h3>
+          </div>
+          <p class="text-gray-600 leading-relaxed mb-6">Integrated sensors help A.C.E become aware of its surroundings and provide a more personalised, intelligent experience tailored to the student's study environment.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-accent shrink-0"></span> Camera module for AI vision features</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-accent shrink-0"></span> Ambient light sensor for auto display adjustment</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-accent shrink-0"></span> Temperature &amp; humidity monitoring</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-accent shrink-0"></span> RGB status lighting for notifications</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-2 h-2 bg-accent shrink-0"></span> Audio input/output (speakers &amp; microphones)</li>
+          </ul>
+        </div>
+        <div class="reveal-child border-[3px] border-black bg-white p-8 shadow-[5px_5px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.2s">
+          <div class="grid grid-cols-2 gap-3">
+            <div class="border-2 border-black bg-gray-50 p-4 text-center"><div class="text-2xl mb-1">📷</div><div class="text-xs font-bold">Camera</div><div class="text-[10px] text-gray-400">AI Vision</div></div>
+            <div class="border-2 border-black bg-gray-50 p-4 text-center"><div class="text-2xl mb-1">☀️</div><div class="text-xs font-bold">Light Sensor</div><div class="text-[10px] text-gray-400">Auto-Brightness</div></div>
+            <div class="border-2 border-black bg-gray-50 p-4 text-center"><div class="text-2xl mb-1">🌡️</div><div class="text-xs font-bold">Temp &amp; Humidity</div><div class="text-[10px] text-gray-400">Environment</div></div>
+            <div class="border-2 border-black bg-gray-50 p-4 text-center"><div class="text-2xl mb-1">💡</div><div class="text-xs font-bold">RGB LED</div><div class="text-[10px] text-gray-400">Notifications</div></div>
+          </div>
+          <div class="border-2 border-black bg-accent text-white text-center py-3 mt-3 font-bold text-sm">🔊 Audio I/O — Speakers &amp; Microphones</div>
+        </div>
+      </div>
+
+      <!-- Physical Design + Expandability -->
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        <div class="reveal-child group border-[3px] border-black bg-white p-8 shadow-[5px_5px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.1s">
+          <div class="w-14 h-14 border-[3px] border-black bg-brutal flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3 tracking-tight">Physical Design</h3>
+          <p class="text-gray-600 leading-relaxed text-sm mb-4">The enclosure is designed to feel like a modern educational device — professional, practical, and built specifically for students.</p>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brutal shrink-0"></span> Custom 3D-printed case</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brutal shrink-0"></span> Hidden cable management</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brutal shrink-0"></span> Integrated cooling vents</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brutal shrink-0"></span> Secure Pi mounting &amp; screen frame</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-brutal shrink-0"></span> Clean desktop-friendly design</li>
+          </ul>
+        </div>
+        <div class="reveal-child group border-[3px] border-black bg-white p-8 shadow-[5px_5px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.2s">
+          <div class="w-14 h-14 border-[3px] border-black bg-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3 tracking-tight">Expandable Platform</h3>
+          <p class="text-gray-600 leading-relaxed text-sm mb-4">A.C.E grows alongside the student. The modular hardware lets students and developers add new features over time through additional components.</p>
+          <ul class="space-y-1.5 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent shrink-0"></span> Rotary encoder controls</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent shrink-0"></span> Additional buttons or shortcuts</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent shrink-0"></span> Advanced sensor modules</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent shrink-0"></span> Custom accessories</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent shrink-0"></span> Educational electronics kits</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Summary Banner -->
+      <div class="reveal-child border-[3px] border-black bg-brutal text-white p-10 md:p-14 shadow-[6px_6px_0px_0px_#969696] text-center" style="--delay: 0.3s">
+        <h3 class="text-2xl md:text-3xl font-bold mb-4 tracking-tight">A Complete Physical &amp; Digital Ecosystem</h3>
+        <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">By combining dedicated hardware with intelligent software, A.C.E becomes a complete academic ecosystem. A personal companion that students can see, touch, and use every day — helping them stay organised, learn effectively, and build better academic habits.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brutal text-white border-t-[3px] border-black">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-10 h-10 rounded-xl border-2 border-white/30 bg-accent flex items-center justify-center font-bold text-lg">A</div>
+            <span class="font-bold text-xl tracking-tight">A.C.E</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-xs">Your personal academic companion. Designed to help students stay organised, plan effectively, and learn smarter.</p>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm tracking-widest uppercase mb-4 text-gray-300">Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-200">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors duration-200">About</a></li>
+            <li><a href="hardware.html" class="text-gray-400 hover:text-white transition-colors duration-200">Hardware</a></li>
+            <li><a href="docs.html" class="text-gray-400 hover:text-white transition-colors duration-200">Features</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors duration-200">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-sm tracking-widest uppercase mb-4 text-gray-300">Connect</h4>
+          <div class="flex gap-3">
+            <a href="https://github.com/coolboy17289" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border-2 border-white/20 flex items-center justify-center hover:bg-white hover:text-brutal transition-all duration-200 text-gray-400" aria-label="GitHub">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-500 text-sm">© 2026 A.C.E. All rights reserved.</p>
+        <p class="text-gray-500 text-xs font-mono">Built with ❤️ by Lihan Badenhorst</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
