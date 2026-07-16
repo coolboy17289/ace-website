@@ -7,10 +7,32 @@
   --accent: #969696;
   --brutal: #1a1a1a;
   --white: #ffffff;
-  --border-w: 3px;
+  --surface: #f9fafb;
+  --text-primary: #1a1a1a;
+  --text-secondary: #6b7280;
+  --border-color: #1a1a1a;
+  --card-bg: #ffffff;
+  --card-border: #1a1a1a;
+  --scrollbar-bg: #ffffff;
   --shadow: 6px 6px 0px 0px var(--brutal);
   --shadow-hover: 8px 8px 0px 0px var(--brutal);
   --transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ---------- Dark Mode ---------- */
+html.dark {
+  --accent: #a3a3a3;
+  --brutal: #e5e5e5;
+  --white: #0a0a0a;
+  --surface: #141414;
+  --text-primary: #e5e5e5;
+  --text-secondary: #a3a3a3;
+  --border-color: #333333;
+  --card-bg: #1a1a1a;
+  --card-border: #333333;
+  --scrollbar-bg: #0a0a0a;
+  --shadow: 6px 6px 0px 0px #333333;
+  --shadow-hover: 8px 8px 0px 0px #333333;
 }
 
 /* ---------- Scrollbar ---------- */
@@ -18,12 +40,12 @@
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--white);
-  border-left: var(--border-w) solid var(--brutal);
+  background: var(--scrollbar-bg);
+  border-left: var(--border-w) solid var(--border-color);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--accent);
-  border: 2px solid var(--brutal);
+  border: 2px solid var(--border-color);
 }
 
 /* ---------- Selection ---------- */
@@ -253,6 +275,96 @@ html {
 
 
 
+
+/* ---------- DARK MODE TRANSITIONS ---------- */
+html.dark body,
+html.dark #navbar,
+html.dark #mobile-menu,
+html.dark footer,
+html.dark .nav-btn,
+html.dark .btn-primary,
+html.dark .btn-secondary,
+html.dark .btn-accent,
+html.dark .reveal-child {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ---------- DARK MODE OVERRIDES ---------- */
+html.dark body {
+  background: var(--white);
+  color: var(--text-primary);
+}
+
+html.dark #navbar {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+html.dark #mobile-menu {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+html.dark .nav-btn {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+html.dark .nav-btn:hover {
+  background: var(--text-primary);
+  color: var(--white);
+  box-shadow: 2px 2px 0px 0px var(--accent);
+}
+
+html.dark .btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+html.dark .btn-secondary:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+html.dark footer {
+  background: #111111;
+  border-color: var(--border-color);
+}
+
+/* Dark mode theme toggle button */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--border-color);
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.theme-toggle:hover {
+  background: var(--text-primary);
+  color: var(--white);
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  width: 18px;
+  height: 18px;
+}
+
+html:not(.dark) .theme-toggle .icon-sun {
+  display: none;
+}
+
+html.dark .theme-toggle .icon-moon {
+  display: none;
+}
 
 /* ---------- PRINT STYLES ---------- */
 @media print {
