@@ -178,6 +178,14 @@
 
 
 
+/* ---------- COMPONENT SLOT PLACEHOLDER ---------- */
+#navbar-slot {
+  height: 64px; /* matches h-16 navbar height to prevent layout shift */
+}
+#footer-slot {
+  min-height: 0;
+}
+
 /* ---------- SCROLL REVEAL ANIMATIONS ---------- */
 .reveal-child {
   opacity: 0;
@@ -191,13 +199,6 @@
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Stagger delay overrides for sequential children */
-.reveal-child[style*="--delay: 0s"]     { transition-delay: 0s; }
-.reveal-child[style*="--delay: 0.1s"]   { transition-delay: 0.1s; }
-.reveal-child[style*="--delay: 0.2s"]   { transition-delay: 0.2s; }
-.reveal-child[style*="--delay: 0.3s"]   { transition-delay: 0.3s; }
-.reveal-child[style*="--delay: 0.4s"]   { transition-delay: 0.4s; }
 
 /* ---------- NAVBAR SCROLL STATE ---------- */
 #navbar.scrolled {
@@ -252,11 +253,6 @@ html {
 
 
 
-
-/* ---------- HOVER LIFT FOR CARDS ---------- */
-.group:hover .group-hover\:scale-110 {
-  transform: scale(1.1);
-}
 
 /* ---------- PRINT STYLES ---------- */
 @media print {
