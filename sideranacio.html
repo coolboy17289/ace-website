@@ -1,33 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>F— A.C.E</title>
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: { accent: "#969696", brutal: "#1a1a1a" },
-            fontFamily: {
-              sans: ['"Space Grotesk"', "system-ui", "sans-serif"],
-              mono: ['"JetBrains Mono"', "monospace"],
-            },
-          },
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community — Sidera Nacio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { accent: '#969696', brutal: '#1a1a1a' },
+          fontFamily: { sans: ['"Space Grotesk"', 'system-ui', 'sans-serif'], mono: ['"JetBrains Mono"', 'monospace'] },
         },
-      };
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script>
     (function() {
@@ -38,396 +30,245 @@
     })();
   </script>
 </head>
-  <body class="bg-white text-brutal font-sans antialiased">
-    <!-- NAVBAR -->
-    <nav
-      id="navbar"
-      class="fixed top-0 left-0 w-full z-50 bg-white border-b-[3px] border-black transition-all duration-300"
-    >
-      <div
-        class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
-      >
-        <a href="index.html" class="flex items-center gap-2 group">
-          <img
-            src="src/assets/LOGO1.svg"
-            alt="A.C.E Logo"
-            class="h-10 w-10 rounded-xl object-cover mix-blend-multiply border-2 border-black bg-white group-hover:scale-110 transition-transform duration-200"
-            onerror="
-              this.style.display = 'none';
-              this.nextElementSibling.style.display = 'flex';
-            "
-          />
-          <div
-            class="h-10 w-10 rounded-xl border-2 border-black bg-accent text-white font-bold text-lg items-center justify-center hidden"
-          >
-            A
+<body class="bg-white text-brutal font-sans antialiased">
+
+  <div id="navbar-slot"></div>
+
+  <!-- HERO SECTION -->
+  <section class="min-h-[70vh] flex items-center pt-20 pb-24 relative overflow-hidden bg-gray-50">
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px); background-size: 24px 24px;"></div>
+    <div class="absolute top-10 right-10 w-40 h-40 border-[3px] border-black rotate-12 opacity-10 pointer-events-none"></div>
+    <div class="absolute bottom-20 left-10 w-24 h-24 bg-accent opacity-10 rotate-45 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="reveal-child" style="--delay: 0s">
+          <span class="inline-block border-2 border-black px-3 py-1 text-sm font-mono font-medium mb-6 bg-white">Sidera Nacio</span>
+        </div>
+
+        <h1 class="reveal-child text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-6" style="--delay: 0.1s">
+          Building a<br/>
+          <span class="bg-accent text-white px-3 py-1 inline-block -rotate-1 mt-1">Nation Together</span>
+        </h1>
+
+        <p class="reveal-child text-lg text-gray-600 max-w-xl mx-auto mb-8 leading-relaxed" style="--delay: 0.2s">
+          Sidera Nacio is an emerging civic community exploring how a nation can be intentionally designed — from its government and constitution to its technology, culture, and future territory.
+        </p>
+
+        <div class="reveal-child flex flex-wrap justify-center gap-3" style="--delay: 0.3s">
+          <a href="#values" class="btn-primary">
+            Explore Our Values
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+          </a>
+          <a href="#join" class="btn-secondary">Join the Community</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION SECTION -->
+  <section class="relative overflow-hidden pt-24 pb-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal-child" style="--delay: 0.1s">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 border-[3px] border-black bg-accent flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Our Mission</h2>
           </div>
-          <span class="font-bold text-lg tracking-tight">A.C.E</span>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            At its core, Sidera Nacio focuses on <strong>equality</strong>, <strong>freedom</strong>, and creating an environment where people are empowered to invent, innovate, and shape the future. We believe that a nation's design should be a deliberate, collaborative act — not something that simply happens over time.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            From its founding principles to its technological infrastructure, every aspect of Sidera Nacio is being thoughtfully crafted to serve its citizens and foster a culture of progress, creativity, and mutual respect.
+          </p>
+        </div>
+        <div class="reveal-child border-[3px] border-black bg-gray-50 p-8 shadow-[5px_5px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.2s">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="border-2 border-black bg-white p-4 text-center">
+              <div class="text-2xl mb-1">⚖️</div>
+              <div class="text-xs font-bold">Equality</div>
+              <div class="text-[10px] text-gray-400">For All Citizens</div>
+            </div>
+            <div class="border-2 border-black bg-white p-4 text-center">
+              <div class="text-2xl mb-1">🕊️</div>
+              <div class="text-xs font-bold">Freedom</div>
+              <div class="text-[10px] text-gray-400">Expression & Innovation</div>
+            </div>
+            <div class="border-2 border-black bg-white p-4 text-center">
+              <div class="text-2xl mb-1">🔬</div>
+              <div class="text-xs font-bold">Innovation</div>
+              <div class="text-[10px] text-gray-400">Technology Forward</div>
+            </div>
+            <div class="border-2 border-black bg-white p-4 text-center">
+              <div class="text-2xl mb-1">🌍</div>
+              <div class="text-xs font-bold">Sustainability</div>
+              <div class="text-[10px] text-gray-400">Future Generations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES SECTION -->
+  <section id="values" class="bg-gray-50 relative overflow-hidden pt-24 pb-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal-child" style="--delay: 0s">
+        <span class="inline-block border-2 border-black px-3 py-1 text-sm font-mono font-medium mb-4 bg-white">Core Values</span>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight">What We <span class="bg-black text-white px-2 -rotate-1 inline-block">Stand For</span></h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">The foundational principles that guide every decision in the Sidera Nacio community.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+        <!-- Value 1 -->
+        <div class="reveal-child group border-[3px] border-black bg-white p-6 shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.1s">
+          <div class="w-12 h-12 border-[3px] border-black bg-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 tracking-tight">Democratic Governance</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Every citizen has a voice in shaping the laws, policies, and direction of the nation through transparent democratic processes.</p>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="reveal-child group border-[3px] border-black bg-white p-6 shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.15s">
+          <div class="w-12 h-12 border-[3px] border-black bg-brutal flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 tracking-tight">Innovation Culture</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">A society that celebrates invention, supports experimentation, and provides the infrastructure for creators to build the future.</p>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="reveal-child group border-[3px] border-black bg-white p-6 shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.2s">
+          <div class="w-12 h-12 border-[3px] border-black bg-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 tracking-tight">Open Education</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Knowledge is a public good. Access to high-quality education and information is a fundamental right for every citizen.</p>
+        </div>
+
+        <!-- Value 4 -->
+        <div class="reveal-child group border-[3px] border-black bg-white p-6 shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.25s">
+          <div class="w-12 h-12 border-[3px] border-black bg-brutal flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 tracking-tight">Sustainable Future</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Building for tomorrow with responsible technology, environmental stewardship, and long-term thinking at the heart of every decision.</p>
+        </div>
+
+        <!-- Value 5 -->
+        <div class="reveal-child group border-[3px] border-black bg-white p-6 shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.3s">
+          <div class="w-12 h-12 border-[3px] border-black bg-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 tracking-tight">Global Connection</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">While building our own nation, we remain open to the world — collaborating internationally and sharing knowledge across borders.</p>
+        </div>
+
+        <!-- Value 6 -->
+        <div class="reveal-child group border-[3px] border-black bg-white p-6 shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.35s">
+          <div class="w-12 h-12 border-[3px] border-black bg-brutal flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2 tracking-tight">Civic Science</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Technology serves the people. AI, data, and digital tools are developed transparently and used to improve citizens' daily lives.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TERRITORY SECTION -->
+  <section class="relative overflow-hidden pt-24 pb-24">
+    <div class="absolute -bottom-10 -right-10 w-48 h-48 border-[3px] border-black rounded-full opacity-10 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal-child" style="--delay: 0s">
+        <span class="inline-block border-2 border-black px-3 py-1 text-sm font-mono font-medium mb-4 bg-gray-100">Territory & Culture</span>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight">Designing Our <span class="bg-black text-white px-2 -rotate-1 inline-block">Home</span></h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">Sidera Nacio is more than an idea — it's a physical place where innovation meets community living.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Territory -->
+        <div class="reveal-child group border-[3px] border-black bg-white p-8 shadow-[5px_5px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.1s">
+          <div class="w-14 h-14 border-[3px] border-black bg-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3 tracking-tight">Future Territory</h3>
+          <p class="text-gray-600 leading-relaxed">The vision includes establishing a dedicated territory where Sidera Nacio's principles can be fully realized — a living laboratory for the future of governance, technology, and community design.</p>
+        </div>
+
+        <!-- Culture -->
+        <div class="reveal-child group border-[3px] border-black bg-white p-8 shadow-[5px_5px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.2s">
+          <div class="w-14 h-14 border-[3px] border-black bg-brutal flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3 tracking-tight">Cultural Identity</h3>
+          <p class="text-gray-600 leading-relaxed">From arts and music to architecture and public spaces, Sidera Nacio is building a rich cultural identity that reflects its values of creativity, inclusion, and forward-thinking design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN SECTION -->
+  <section id="join" class="bg-gray-50 relative overflow-hidden pt-24 pb-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal-child" style="--delay: 0s">
+        <span class="inline-block border-2 border-black px-3 py-1 text-sm font-mono font-medium mb-4 bg-white">Get Involved</span>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight">Join the <span class="bg-accent text-white px-2 rotate-1 inline-block">Movement</span></h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">Whether you're a developer, designer, educator, or dreamer — there's a place for you in Sidera Nacio.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+
+        <!-- Contributor -->
+        <div class="reveal-child border-[3px] border-black bg-white p-6 text-center shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.1s">
+          <div class="text-4xl mb-4">🛠️</div>
+          <h3 class="text-lg font-bold mb-2">Contributor</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">Build tools, write code, and help shape the technology infrastructure of the nation.</p>
+          <a href="https://github.com/coolboy17289" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm w-full justify-center">Start Building</a>
+        </div>
+
+        <!-- Citizen -->
+        <div class="reveal-child border-[3px] border-black bg-white p-6 text-center shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.2s">
+          <div class="text-4xl mb-4">🧑‍🤝‍🧑</div>
+          <h3 class="text-lg font-bold mb-2">Citizen</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">Participate in discussions, vote on proposals, and help define the culture of Sidera Nacio.</p>
+          <a href="contact.html" class="btn-secondary text-sm w-full justify-center">Get Connected</a>
+        </div>
+
+        <!-- Visionary -->
+        <div class="reveal-child border-[3px] border-black bg-white p-6 text-center shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200" style="--delay: 0.3s">
+          <div class="text-4xl mb-4">💡</div>
+          <h3 class="text-lg font-bold mb-2">Visionary</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">Share ideas, propose new initiatives, and help write the constitution of our future nation.</p>
+          <a href="contact.html" class="btn-accent text-sm w-full justify-center">Share Ideas</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SUMMARY BANNER -->
+  <section class="relative overflow-hidden pt-8 pb-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="reveal-child border-[3px] border-black bg-brutal text-white p-10 md:p-14 shadow-[6px_6px_0px_0px_#969696] text-center" style="--delay: 0.2s">
+        <h3 class="text-2xl md:text-3xl font-bold mb-4 tracking-tight">The Future Is Being Designed — Right Now</h3>
+        <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed mb-6">Sidera Nacio is more than a project. It's a movement to reimagine what a nation can be when its people are empowered to shape every aspect of its design — from the constitution to the code.</p>
+        <a href="contact.html" class="btn-primary">
+          Join Us Today
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
-        <div class="hidden md:flex items-center gap-2">
-          <a href="index.html" class="nav-btn">Home</a>
-          <a href="about.html" class="nav-btn">About</a>
-          <a href="hardware.html" class="nav-btn">Hardware</a>
-          <a href="docs.html" class="nav-btn">Features</a>
-          <a href="contact.html" class="nav-btn">Contact</a>
-          <a href="sideranacio.html" class="nav-btn">comunity</a>
-        </div>
-        <button
-          id="mobile-menu-btn"
-          class="md:hidden w-10 h-10 border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-200"
-          aria-expanded="false"
-          aria-label="Toggle navigation menu"
-        >
-          <svg
-            class="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
       </div>
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden border-t-[3px] border-black bg-white"
-      >
-        <div class="px-6 py-4 flex flex-col gap-2">
-          <a href="index.html" class="nav-btn w-full text-center">Home</a>
-          <a href="about.html" class="nav-btn w-full text-center">About</a>
-          <a href="hardware.html" class="nav-btn w-full text-center"
-            >Hardware</a
-          >
-          <a href="docs.html" class="nav-btn w-full text-center">Features</a>
-          <a href="contact.html" class="nav-btn w-full text-center">Contact</a>
-          <a href="sideranacio.html" class="nav-btn w-full text-center"
-            >Comunity</a
-          >
-        </div>
-      </div>
-    </nav>
+    </div>
+  </section>
 
-    <!-- FEATURES SECTION -->
-    <section class="relative overflow-hidden pt-24 pb-24">
-      <div
-        class="absolute -bottom-10 -right-10 w-48 h-48 border-[3px] border-black rounded-full opacity-10 pointer-events-none"
-      ></div>
+  <div id="footer-slot"></div>
 
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16 reveal-child" style="--delay: 0s">
-          <span
-            class="inline-block border-2 border-black px-3 py-1 text-sm font-mono font-medium mb-4 bg-gray-100"
-            >Features</span
-          >
-          <h2 class="text-4xl md:text-5xl font-bold tracking-tight">
-            Join Our<span
-              class="bg-black text-white px-2 -rotate-1 inline-block"
-              >Comunity</span
-            >
-          </h2>
-          <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
-            Sidera Nacio is an emerging civic community exploring how a nation
-            can be intentionally designed,<br />
-            from its government and constitution to its technology, culture, and
-            future territory.<br />
-            At its core, Sidera Nacio focuses on equality, freedom, and creating
-            an environment where people<br />
-            are empowered to invent, innovate, and shape the future.
-          </p>
-        </div>
-
-        <!-- Features Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <!-- Feature 1 -->
-          <div
-            class="reveal-child group border-[3px] border-black bg-white p-6 shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200"
-            style="--delay: 0.1s"
-          >
-            <div
-              class="w-12 h-12 border-[3px] border-black bg-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200"
-            >
-              <svg
-                class="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-                />
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold mb-2 tracking-tight">
-              Smart Dashboard
-            </h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              A central hub showing assignments, deadlines, schedules, tasks,
-              and important notifications at a glance.
-            </p>
-          </div>
-
-          <!-- Feature 2 -->
-          <div
-            class="reveal-child group border-[3px] border-black bg-white p-6 shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200"
-            style="--delay: 0.15s"
-          >
-            <div
-              class="w-12 h-12 border-[3px] border-black bg-brutal flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200"
-            >
-              <svg
-                class="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                />
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold mb-2 tracking-tight">
-              AI Learning Assistant
-            </h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Get help explaining concepts, answering questions, and providing
-              personalised study guidance when you need it.
-            </p>
-          </div>
-
-          <!-- Feature 3 -->
-          <div
-            class="reveal-child group border-[3px] border-black bg-white p-6 shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200"
-            style="--delay: 0.2s"
-          >
-            <div
-              class="w-12 h-12 border-[3px] border-black bg-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200"
-            >
-              <svg
-                class="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold mb-2 tracking-tight">Study Planner</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Creates personalised study schedules based on upcoming
-              assessments, workload, and your availability.
-            </p>
-          </div>
-
-          <!-- Feature 4 -->
-          <div
-            class="reveal-child group border-[3px] border-black bg-white p-6 shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200"
-            style="--delay: 0.25s"
-          >
-            <div
-              class="w-12 h-12 border-[3px] border-black bg-brutal flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200"
-            >
-              <svg
-                class="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-                />
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold mb-2 tracking-tight">
-              Assignment Tracker
-            </h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Track progress, priorities, and completion status for all your
-              assignments and projects in one place.
-            </p>
-          </div>
-
-          <!-- Feature 5 -->
-          <div
-            class="reveal-child group border-[3px] border-black bg-white p-6 shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200"
-            style="--delay: 0.3s"
-          >
-            <div
-              class="w-12 h-12 border-[3px] border-black bg-accent flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200"
-            >
-              <svg
-                class="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-                />
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold mb-2 tracking-tight">
-              Notes & Resources
-            </h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Store class notes, resources, and learning materials. Keep
-              everything organised and easy to find.
-            </p>
-          </div>
-
-          <!-- Feature 6 -->
-          <div
-            class="reveal-child group border-[3px] border-black bg-white p-6 shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#1a1a1a] transition-all duration-200"
-            style="--delay: 0.35s"
-          >
-            <div
-              class="w-12 h-12 border-[3px] border-black bg-brutal flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200"
-            >
-              <svg
-                class="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold mb-2 tracking-tight">
-              Productivity Tools
-            </h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Built-in timers, focus modes, habit tracking, and goal setting to
-              help you stay productive and on track.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-brutal text-white border-t-[3px] border-black">
-      <div class="max-w-7xl mx-auto px-6 py-16">
-        <div class="grid md:grid-cols-3 gap-12 mb-12">
-          <div>
-            <div class="flex items-center gap-2 mb-4">
-              <div
-                class="w-10 h-10 rounded-xl border-2 border-white/30 bg-accent flex items-center justify-center font-bold text-lg"
-              >
-                A
-              </div>
-              <span class="font-bold text-xl tracking-tight">A.C.E</span>
-            </div>
-            <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Your personal academic companion. Designed to help students stay
-              organised, plan effectively, and learn smarter.
-            </p>
-          </div>
-          <div>
-            <h4
-              class="font-bold text-sm tracking-widest uppercase mb-4 text-gray-300"
-            >
-              Links
-            </h4>
-            <ul class="space-y-2 text-sm">
-              <li>
-                <a
-                  href="index.html"
-                  class="text-gray-400 hover:text-white transition-colors duration-200"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="about.html"
-                  class="text-gray-400 hover:text-white transition-colors duration-200"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="hardware.html"
-                  class="text-gray-400 hover:text-white transition-colors duration-200"
-                  >Hardware</a
-                >
-              </li>
-              <li>
-                <a
-                  href="docs.html"
-                  class="text-gray-400 hover:text-white transition-colors duration-200"
-                  >Features</a
-                >
-              </li>
-              <li>
-                <a
-                  href="contact.html"
-                  class="text-gray-400 hover:text-white transition-colors duration-200"
-                  >Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4
-              class="font-bold text-sm tracking-widest uppercase mb-4 text-gray-300"
-            >
-              Connect
-            </h4>
-            <div class="flex gap-3">
-              <a
-                href="https://github.com/coolboy17289"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="w-10 h-10 border-2 border-white/20 flex items-center justify-center hover:bg-white hover:text-brutal transition-all duration-200 text-gray-400"
-                aria-label="GitHub"
-              >
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
-        >
-          <p class="text-gray-500 text-sm">
-            © 2026 A.C.E. All rights reserved.
-          </p>
-          <p class="text-gray-500 text-xs font-mono">
-            Built with ❤️ by Lihan Badenhorst
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>

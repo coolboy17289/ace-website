@@ -333,6 +333,77 @@ html.dark footer {
   border-color: var(--border-color);
 }
 
+/* Dark mode: gray section backgrounds */
+html.dark section.bg-gray-50,
+html.dark .bg-gray-50 {
+  background-color: #111111 !important;
+}
+
+/* Dark mode: card backgrounds */
+html.dark .bg-white {
+  background-color: var(--card-bg) !important;
+}
+
+/* Dark mode: borders */
+html.dark .border-black,
+html.dark [class*="border-[3px]"],
+html.dark [class*="border-2"],
+html.dark [class*="border-[3px]"],
+html.dark .border-b-\[3px\],
+html.dark .border-t-\[3px\] {
+  border-color: var(--border-color) !important;
+}
+
+/* Dark mode: text colors */
+html.dark .text-gray-600,
+html.dark .text-gray-500,
+html.dark .text-gray-400,
+html.dark .text-gray-300 {
+  color: var(--text-secondary) !important;
+}
+
+html.dark .text-black {
+  color: var(--text-primary) !important;
+}
+
+/* Dark mode: gray backgrounds on elements */
+html.dark .bg-gray-100,
+html.dark .bg-gray-200 {
+  background-color: #262626 !important;
+}
+
+/* Dark mode: borders on inner elements */
+html.dark .border-gray-300 {
+  border-color: #404040 !important;
+}
+
+/* Dark mode: shadow adjustments */
+html.dark [class*="shadow-["] {
+  box-shadow: 4px 4px 0px 0px #333 !important;
+}
+
+/* Dark mode: dashboard stat boxes */
+html.dark .border.border-gray-300 {
+  border-color: #404040 !important;
+  background-color: #1a1a1a !important;
+}
+
+/* Dark mode: scrollbar */
+html.dark ::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #555;
+  border-color: #333;
+}
+
+/* Dark mode: selection */
+html.dark ::selection {
+  background: var(--accent);
+  color: var(--white);
+}
+
 /* Dark mode theme toggle button */
 .theme-toggle {
   display: inline-flex;

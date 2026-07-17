@@ -17,6 +17,8 @@ function applyTheme(theme) {
 }
 
 // Apply theme immediately to prevent flash (runs before DOMContentLoaded)
+// Note: The inline <script> in each HTML <head> also applies the theme
+// to prevent flash before this external script loads.
 applyTheme(getPreferredTheme());
 
 // ===================== SHARED COMPONENTS =====================
